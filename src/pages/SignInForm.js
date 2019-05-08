@@ -34,13 +34,13 @@ class SignInForm extends React.Component {
                 <form className="FormFields" onSubmit={this.handleSubmit}>
                     <div className="FormField">
                         <label className="FormField__Label" htmlFor="email">Email address</label>
-                        <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" />
+                        <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" name="email" value={this.state.email} onChange={this.handleChange} />
                     </div>
 
 
                     <div className="FormField">
                         <label className="FormField__Label" htmlFor="password">Password</label>
-                        <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" />
+                        <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
                     </div>
 
 
