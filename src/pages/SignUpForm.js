@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 class SignUpForm extends React.Component {
     constructor() {
-        super();
+        super()
 
         this.state = {
             email: "",
@@ -12,25 +12,25 @@ class SignUpForm extends React.Component {
             hasAgreed: false
         };
 
-        this.handldeChange = this.handleChange.bind(this);
-        this.handldeSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
     }
     handleChange(e) {
-        let target = e.target;
-        let value = target.type === "checkbox" ? target.check : target.value;
+        let target = e.target
+        let value = target.type === "checkbox" ? target.checked : target.value
         let name = target.name
 
         this.setState({
             [name]: value
 
-        });
+        })
     }
     handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault()
 
-        console.log("The form was submitted with the following data");
-        console.log(this.state);
+        console.log("The form was submitted with the following data")
+        console.log(this.state)
 
     }
     render() {
@@ -51,7 +51,7 @@ class SignUpForm extends React.Component {
                     </div>
                     <div className="FormField">
                         <label className="FormField__CheckboxLabel">
-                            <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange ={this.handleChange} />I agree to all statements in <a href="" className="FormField__TermsLink">Terms of service</a>
+                            <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} />I agree to all statements in <a href="" className="FormField__TermsLink">Terms of service</a>
                         </label>
                     </div>
 
